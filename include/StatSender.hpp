@@ -19,7 +19,8 @@ public:
     virtual ~Statistic() = default;
 
 private:
-    virtual void AsyncSend(const std::vector<Item>& items, std::string_view path);
+    virtual void AsyncSend(const std::vector<Item>& items,
+                           std::string_view path);
 
     std::ofstream fstr{"network", std::ios::binary};
 };

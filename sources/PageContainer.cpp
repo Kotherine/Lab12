@@ -26,7 +26,7 @@ void PageContainer::PrintTable() const {
                   item.name << "\t\t|\t" << item.score << "\t\t|" << std::endl;
         const auto& item2 = ById(std::to_string(i));
         std::cout << "|   " << item2.id << "\t |\t\t" <<
-                  item2.name << "\t\t|\t" << item2.score << "\t\t|" << std::endl;
+                item2.name << "\t\t|\t" << item2.score << "\t\t|" << std::endl;
         std::cout << separator;
     }
 }
@@ -103,7 +103,8 @@ bool PageContainer::IsCorrect(std::string& line) {
         } else if (counter == 0) {
             status = (ch >= '0' && ch <= '9') && status;
         } else if (counter == 1) {
-            status = ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) && status;
+            status = ((ch >= 'A' && ch <= 'Z') ||
+                    (ch >= 'a' && ch <= 'z')) && status;
         } else if (counter == 2) {
             status = (ch >= '0' && ch <= '9') && status;
         }

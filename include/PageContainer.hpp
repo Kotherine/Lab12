@@ -37,7 +37,7 @@ public:
 
     explicit PageContainer(UsedMemory* memory_counter = new UsedMemory(),
                            Statistic* statistic_sender = new Statistic())
-            : memory_counter_(memory_counter), statistic_sender_(statistic_sender){}
+    : memory_counter_(memory_counter), statistic_sender_(statistic_sender){}
 
     ~PageContainer();
 
